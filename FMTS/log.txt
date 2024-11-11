@@ -1,0 +1,1 @@
+solar_nips_forecasting hucfg_num_steps=800 hucfg_t_sampling=logitnorm hucfg_attention_rope_use=-1 hucfg_lr=3e-4 hucfg_Kscale=0.03 331.0546215228122

@@ -1,0 +1,25 @@
+model:
+  target: Models.interpretable_diffusion.FMTS.FM_TS
+  params:
+    seq_length: 100
+    feature_size: 14
+    n_layer_enc: 3
+    n_layer_dec: 3
+    d_model: 64  # 4 X 16
+    n_heads: 4
+    mlp_hidden_times: 4
+    attn_pd: 0
+    resid_pd: 0
+    kernel_size: 1
+    padding_size: 0
+
+solver:
+  base_lr: 1.0e-5
+  max_epochs: 12000
+  # results_folder: ./Checkpoints_mujoco_sssd
+  gradient_accumulate_every: 2
+  save_cycle: 1200  # max_epochs // 10
+  ema:
+    decay: 0.995
+    update_interval: 10
+  

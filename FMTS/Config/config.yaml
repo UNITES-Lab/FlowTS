@@ -1,0 +1,25 @@
+model:
+  target: Models.interpretable_diffusion..FMTS.FM_TS
+  params:
+    seq_length: 160
+    feature_size: 5
+    n_layer_enc: 1
+    n_layer_dec: 2
+    d_model: 64  # 4 X 16
+    n_heads: 4
+    mlp_hidden_times: 4
+    attn_pd: 0.1
+    resid_pd: 0.1
+    kernel_size: 5
+    padding_size: 2
+
+solver:
+  base_lr: 1.0e-5
+  max_epochs: 1000
+  # results_folder: ./Checkpoints_syn
+  gradient_accumulate_every: 2
+  save_cycle: 100  # max_epochs // 10
+  ema:
+    decay: 0.99
+    update_interval: 10
+  

@@ -1,0 +1,25 @@
+model:
+  target: Models.interpretable_diffusion.FMTS.FM_TS
+  params:
+    seq_length: 192
+    feature_size: 128
+    n_layer_enc: 4
+    n_layer_dec: 4
+    d_model: 96  # 4 X 24
+    n_heads: 4
+    mlp_hidden_times: 4
+    attn_pd: 0.0
+    resid_pd: 0.0
+    kernel_size: 1
+    padding_size: 0
+
+solver:
+  base_lr: 1.0e-5
+  max_epochs: 1500
+  # results_folder: ./Checkpoints_solar
+  gradient_accumulate_every: 2
+  save_cycle: 150  # max_epochs // 10
+  ema:
+    decay: 0.995
+    update_interval: 10
+  
