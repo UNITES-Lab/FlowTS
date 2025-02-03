@@ -1,1 +1,1 @@
-Time Series Generation via Rectiﬁed Flow
+FlowTS: Time Series Generation via Rectiﬁed Flow
